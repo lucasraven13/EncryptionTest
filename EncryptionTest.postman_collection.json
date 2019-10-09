@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EncryptionTest",
+		"_postman_id": "7410c333-f4b1-b9fd-0c8c-a59f39aa3e32",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Encrypt",
+			"request": {
+				"url": "http://localhost:54411/api/encryption/encrypt",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Secret\": \"My first encrypted test message\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt",
+			"request": {
+				"url": "http://localhost:localhost:54411/api/encryption/decrypt",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Data\": \"FcEFuOBgRypvImcAtp6ak+YqBOQxqGEoIVHDOh6t3MQ=\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Rotate",
+			"request": {
+				"url": "http://localhost:localhost:54412/api/key",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
